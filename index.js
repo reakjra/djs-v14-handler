@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const fs = require('fs');
-dotenv.config()
 
 const Client = new Discord.Client({
     intents: [Discord.GatewayIntentBits.Guilds, Discord.GatewayIntentBits.GuildIntegrations, Discord.GatewayIntentBits.GuildMembers]
