@@ -1,10 +1,9 @@
 const Discord = require('discord.js');
 const fs = require('fs');
-const dotenv = require('dotenv')
 dotenv.config()
 
 const Client = new Discord.Client({
-    intents: 46791// [Discord.GatewayIntentBits.Guilds, Discord.GatewayIntentBits.GuildIntegrations, Discord.GatewayIntentBits.GuildMembers]
+    intents: [Discord.GatewayIntentBits.Guilds, Discord.GatewayIntentBits.GuildIntegrations, Discord.GatewayIntentBits.GuildMembers]
 })
 
 Client.SlashCmds = new Discord.Collection()
@@ -48,4 +47,4 @@ fs.readdirSync('./SlashCommands/').forEach(dir => {
 })
 
 
-Client.login(process.env.token)
+Client.login('Your Bot Token')
