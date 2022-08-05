@@ -10,7 +10,7 @@ Client.on('ready', async() => {
 
   let filt1 = data.filter(c => c.Globally == true)
            
-  Client.application?.commands.set(filt1)
+  await Client.application?.commands.set(filt1)
            
   let filt2 = data.filter(c => c.Globally == false)
             
