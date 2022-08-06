@@ -4,7 +4,7 @@ const Discord = require('discord.js')
 
 Client.on('interactionCreate', async inter => {
 
-    if(inter.type == InteractionType.ApplicationCommand) {
+    if(inter.type === InteractionType.ApplicationCommand) {
 
         let slashCmds = Client.SlashCmds.get(inter.commandName)
 
